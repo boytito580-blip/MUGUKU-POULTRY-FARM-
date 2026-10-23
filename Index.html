@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Muguku Poultry Farm | Quality Chicks & Eggs in Kenya</title>
+  <meta name="description" content="Muguku Poultry Farm - Day old chicks, improved kienyeji, commercial layers, fresh eggs. Order via WhatsApp. Located in Kenya.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1e2a1e; line-height: 1.5; }
+    :root {
+      --green: #2e7d32; --green-light: #4caf50; --green-dark: #1b5e20;
+      --gold: #fbc02d; --gold-dark: #f9a825; --white: #ffffff;
+      --gray-light: #f5f7f5; --shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+    .header { background-color: var(--green); color: white; padding: 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+    .logo h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px; }
+    .logo i { color: var(--gold); font-size: 2rem; }
+    .logo span { color: var(--gold); }
+    .contact-quick { display: flex; align-items: center; gap: 20px; font-size: 0.95rem; }
+    .contact-quick i { color: var(--gold); margin-right: 6px; }
+    .whatsapp-float { background-color: #25D366; color: white; padding: 10px 20px; border-radius: 40px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+    .whatsapp-float:hover { background-color: #128C7E; transform: scale(1.02); }
+    .nav-bar { background-color: var(--green-dark); padding: 8px 0; }
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; list-style: none; }
+    .nav-links a { color: white; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 6px 0; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+    .nav-links a:hover { border-bottom-color: var(--gold); }
+    .btn { display: inline-block; background-color: var(--gold); color: #1e2a1e; font-weight: 600; padding: 12px 28px; border-radius: 40px; text-decoration: none; border: none; cursor: pointer; transition: background 0.2s, transform 0.1s; font-size: 1rem; text-align: center; }
+    .btn:hover { background-color: var(--gold-dark); transform: translateY(-2px); }
+    .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--green-dark); font-weight: 600; }
+    .btn-outline:hover { background: var(--gold); color: var(--green-dark); }
+    .btn-whatsapp { background-color: #25D366; color: white; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; font-size: 0.9rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: background 0.2s; border: none; width: 100%; cursor: pointer; }
+    .btn-whatsapp i { font-size: 1.1rem; }
+    .btn-whatsapp:hover { background-color: #128C7E; }
+    .hero { background: linear-gradient(135deg, rgba(46,125,50,0.92) 0%, rgba(27,94,32,0.95) 100%), url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover; color: white; padding: 60px 0; text-align: center; }
+    .hero h2 { font-size: 2.4rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.95; }
+    .section { padding: 60px 0; }
+    .section-title { font-size: 2rem; font-weight: 700; color: var(--green-dark); margin-bottom: 20px; text-align: center; position: relative; }
+    .section-title:after { content: ''; display: block; width: 80px; height: 4px; background: var(--gold); margin: 12px auto 0; border-radius: 2px; }
+    .section-subtitle { text-align: center; max-width: 700px; margin: 0 auto 40px; color: #4a5a4a; font-size: 1.1rem; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+    .product-card { background: white; border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; border: 1px solid #e8f0e8; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 16px 30px rgba(0,0,0,0.08); }
+    .product-img { height: 190px; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; }
+    .product-badge { position: absolute; top: 12px; right: 12px; background: var(--gold); color: #1e2a1e; font-weight: 700; padding: 4px 12px; border-radius: 30px; font-size: 0.8rem; letter-spacing: 0.5px; }
+    .product-info { padding: 20px 18px 18px; flex: 1; display: flex; flex-direction: column; }
+    .product-title { font-size: 1.3rem; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .product-desc { font-size: 0.9rem; color: #4a5a4a; margin-bottom: 14px; flex: 1; }
+    .price-stock { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; flex-wrap: wrap; }
+    .price { font-size: 1.5rem; font-weight: 700; color: var(--green); }
+    .price small { font-size: 0.8rem; font-weight: 400; color: #5a6a5a; }
+    .stock { font-size: 0.85rem; background: #e8f5e9; padding: 4px 10px; border-radius: 30px; color: var(--green-dark); font-weight: 500; }
+    .order-form-mini { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+    .order-inputs { display: flex; gap: 8px; }
+    .order-inputs input { width: 100%; padding: 8px 10px; border: 1px solid #cfd8cf; border-radius: 30px; font-size: 0.9rem; outline: none; transition: border 0.2s; }
+    .order-inputs input:focus { border-color: var(--green); }
+    .order-inputs input::placeholder { color: #9aaa9a; }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .info-card { background: var(--gray-light); border-radius: 24px; padding: 28px 24px; border-left: 6px solid var(--gold); }
+    .info-card h3 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+    .info-card h3 i { color: var(--gold-dark); }
+    .payment-placeholder { font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; background: white; padding: 10px 14px; border-radius: 40px; border: 1px dashed #b0c4b0; }
+    .payment-placeholder i { color: var(--green); width: 20px; }
+    .payment-placeholder strong { color: var(--green-dark); min-width: 100px; }
+    .instructions { margin-top: 18px; font-size: 0.95rem; background: white; padding: 16px; border-radius: 16px; border: 1px solid #d0e0d0; }
+    .order-form-full { background: white; border-radius: 28px; padding: 32px; box-shadow: var(--shadow); border: 1px solid #e0eae0; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-weight: 600; font-size: 0.95rem; color: #2e4a2e; margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid #cfd8cf; border-radius: 40px; font-family: inherit; font-size: 1rem; outline: none; transition: border 0.2s, box-shadow 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(46,125,50,0.15); }
+    .form-group textarea { border-radius: 20px; resize: vertical; min-height: 80px; }
+    .contact-details { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; font-size: 1.05rem; }
+    .contact-details div { display: flex; align-items: center; gap: 10px; background: var(--gray-light); padding: 10px 24px; border-radius: 50px; }
+    .contact-details i { color: var(--green); font-size: 1.3rem; }
+    .footer { background: var(--green-dark); color: #d0e0d0; padding: 40px 0 25px; margin-top: 40px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+    .footer h4 { color: white; margin-bottom: 16px; font-size: 1.1rem; }
+    .footer a { color: #d0e0d0; text-decoration: none; display: block; margin-bottom: 8px; transition: color 0.2s; }
+    .footer a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid #3a5a3a; margin-top: 30px; padding-top: 20px; text-align: center; font-size: 0.9rem; }
+    .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--green-dark); color: white; padding: 14px 30px; border-radius: 50px; font-weight: 500; box-shadow: 0 10px 25px rgba(0,0,0,0.2); z-index: 999; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .toast.show { opacity: 1; }
+    @media (max-width: 700px) {
+      .hero h2 { font-size: 1.8rem; } .hero p { font-size: 1rem; }
+      .logo h1 { font-size: 1.4rem; } .contact-quick span { display: none; }
+      .form-row { grid-template-columns: 1fr; } .nav-links { gap: 15px; font-size: 0.9rem; }
+      .section { padding: 40px 0; } .order-form-full { padding: 22px; }
+    }
+    @media (max-width: 480px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .contact-details div { width: 100%; justify-content: center; }
+      .header-content { justify-content: center; text-align: center; }
+      .contact-quick { justify-content: center; width: 100%; }
+    }
+    .text-gold { color: var(--gold-dark); }
+    .mt-2 { margin-top: 8px; } .mb-2 { margin-bottom: 8px; } .w-100 { width: 100%; }
+    .img-chicks { background-image: url('https://images.unsplash.com/photo-1582550051924-1f1a92f661d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .img-kienyeji { background-image: url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .img-layers { background-image: url('https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+    .img-eggs { background-image: url('https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header-content">
+    <div class="logo">
+      <h1><i class="fas fa-dove"></i> MUGUKU <span>POULTRY</span></h1>
+    </div>
+    <div class="contact-quick">
+      <span><i class="fas fa-phone-alt"></i> 0101 012 376</span>
+      <a href="#" class="whatsapp-float" id="headerWhatsAppBtn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Order Now
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav class="nav-bar">
+  <div class="container">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#products">Products & Prices</a></li>
+      <li><a href="#payment">Payment</a></li>
+      <li><a href="#order">Order Form</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container">
+    <h2>Quality Chicks & Fresh Eggs for Kenya</h2>
+    <p>Day-old chicks, improved kienyeji, commercial layers, and farm-fresh eggs. Order via WhatsApp today!</p>
+    <a href="#products" class="btn">View Products</a>
+  </div>
+</section>
+
+<!-- About Us -->
+<section class="section" id="about">
+  <div class="container">
+    <h2 class="section-title">About Muguku Poultry Farm</h2>
+    <p class="section-subtitle">Trusted by farmers across Kenya for healthy birds and reliable supply.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3><i class="fas fa-tractor"></i> Our Farm</h3>
+        <p>Located in Muguku, Kenya, we specialize in raising high-quality poultry. Our day-old chicks are vaccinated and ready to thrive. We supply improved kienyeji, commercial layers, and fresh eggs to farmers, hotels, and households.</p>
+      </div>
+      <div class="info-card">
+        <h3><i class="fas fa-check-circle"></i> Why Choose Us?</h3>
+        <p>✓ Healthy, vaccinated stock<br>✓ Competitive prices in KSh<br>✓ Reliable delivery across Kenya<br>✓ Expert farming tips and support<br>✓ Easy WhatsApp ordering</p>
+      </div>
+      <div class="info-card">
+        <h3><i class="fas fa-truck"></i> Delivery Info</h3>
+        <p>We deliver countrywide via courier and local transport. Delivery fees depend on location. Orders are processed within 24 hours. Contact us on WhatsApp for delivery estimates to your area.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products & Prices -->
+<section class="section" id="products" style="background-color: var(--gray-light);">
+  <div class="container">
+    <h2 class="section-title">Products & Prices (KSh)</h2>
+    <p class="section-subtitle">All prices are in Kenyan Shillings. Stock is updated regularly. Enter quantity and order via WhatsApp.</p>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Product 1: Day-old chicks -->
+      <div class="product-card" data-product="Day Old Chicks" data-price="120" data-stock="500">
+        <div class="product-img img-chicks"></div>
+        <div class="product-info">
+          <h3 class="product-title">Day Old Chicks</h3>
+          <p class="product-desc">Vaccinated, healthy day-old chicks. Ready for rearing.</p>
+          <div class="price-stock">
+            <span class="price">KSh 120 <small>/ chick</small></span>
+            <span class="stock">In stock: 500</span>
+          </div>
+          <div class="order-form-mini">
+            <div class="order-inputs">
+              <input type="number" min="1" value="1" class="qty-input" placeholder="Qty" aria-label="Quantity">
+              <button class="btn-whatsapp order-btn" data-product="Day Old Chicks" data-price="120">
+                <i class="fab fa-whatsapp"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2: Improved Kienyeji -->
+      <div class="product-card" data-product="Improved Kienyeji" data-price="250" data-stock="200">
+        <div class="product-img img-kienyeji"></div>
+        <div class="product-info">
+          <h3 class="product-title">Improved Kienyeji</h3>
+          <p class="product-desc">Hardy, fast-growing kienyeji chicks. Excellent for free-range.</p>
+          <div class="price-stock">
+            <span class="price">KSh 250 <small>/ chick</small></span>
+            <span class="stock">In stock: 200</span>
+          </div>
+          <div class="order-form-mini">
+            <div class="order-inputs">
+              <input type="number" min="1" value="1" class="qty-input" placeholder="Qty" aria-label="Quantity">
+              <button class="btn-whatsapp order-btn" data-product="Improved Kienyeji" data-price="250">
+                <i class="fab fa-whatsapp"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3: Commercial Layers -->
+      <div class="product-card" data-product="Commercial Layers" data-price="450" data-stock="150">
+        <div class="product-img img-layers"></div>
+        <div class="product-info">
+          <h3 class="product-title">Commercial Layers</h3>
+          <p class="product-desc">Point-of-lay and laying hens. High egg production.</p>
+          <div class="price-stock">
+            <span class="price">KSh 450 <small>/ bird</small></span>
+            <span class="stock">In stock: 150</span>
+          </div>
+          <div class="order-form-mini">
+            <div class="order-inputs">
+              <input type="number" min="1" value="1" class="qty-input" placeholder="Qty" aria-label="Quantity">
+              <button class="btn-whatsapp order-btn" data-product="Commercial Layers" data-price="450">
+                <i class="fab fa-whatsapp"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4: Eggs -->
+      <div class="product-card" data-product="Fresh Eggs" data-price="15" data-stock="1000">
+        <div class="product-img img-eggs"></div>
+        <div class="product-info">
+          <h3 class="product-title">Fresh Eggs</h3>
+          <p class="product-desc">Farm-fresh, large eggs. Sold per tray (30 pcs) or per egg.</p>
+          <div class="price-stock">
+            <span class="price">KSh 15 <small>/ egg</small></span>
+            <span class="stock">In stock: 1000</span>
+          </div>
+          <div class="order-form-mini">
+            <div class="order-inputs">
+              <input type="number" min="1" value="1" class="qty-input" placeholder="Qty" aria-label="Quantity">
+              <button class="btn-whatsapp order-btn" data-product="Fresh Eggs" data-price="15">
+                <i class="fab fa-whatsapp"></i> Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Farming Tips -->
+    <div style="margin-top: 50px;">
+      <h3 class="section-title" style="font-size: 1.8rem;">Poultry Farming Tips</h3>
+      <div class="info-grid">
+        <div class="info-card" style="border-left-color: var(--green);">
+          <h3><i class="fas fa-sun"></i> Brooding</h3>
+          <p>Keep chicks warm at 32-35°C for the first week. Reduce temperature by 3°C weekly. Provide clean water and starter feed.</p>
+        </div>
+        <div class="info-card" style="border-left-color: var(--green);">
+          <h3><i class="fas fa-apple-alt"></i> Feeding</h3>
+          <p>Use quality feeds: chick mash, grower mash, and layer mash. Always provide grit and clean water. Avoid moldy feed.</p>
+        </div>
+        <div class="info-card" style="border-left-color: var(--green);">
+          <h3><i class="fas fa-shield-alt"></i> Biosecurity</h3>
+          <p>Clean and disinfect coops regularly. Isolate sick birds. Vaccinate on schedule. Control visitors and rodents.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Payment Details -->
+<section class="section" id="MPESAorAIRTELMONEY">
+  <div class="container">
+    <h2 class="section-title">0101012376</h2>
+    <p class="section-subtitle">Use the following payment methods. <strong>Placeholders — update with your real details.</strong></p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3><i class="fas fa-mobile-alt"></i> M-Pesa</h3>
+        <div class="payment-placeholder"><i class="fas fa-building"></i> <strong>Paybill:</strong> <span>XXXXXX</span></div>
+        <div class="payment-placeholder"><i class="fas fa-store"></i> <strong>Till Number:</strong> <span>XXXXXX</span></div>
+        <div class="payment-placeholder"><i class="fas fa-user"></i> <strong>Account No:</strong> <span>MUGUKU001</span></div>
+        <p class="mt-2"><i class="fas fa-info-circle text-gold"></i> Use your order number as account.</p>
+      </div>
+      <div class="info-card">
+        <h3><i class="fas fa-university"></i> Bank Transfer</h3>
+        <div class="payment-placeholder"><i class="fas fa-university"></i> <strong>Bank:</strong> <span>Equity Bank</span></div>
+        <div class="payment-placeholder"><i class="fas fa-user"></i> <strong>Account Name:</strong> <span>Muguku Poultry Farm</span></div>
+        <div class="payment-placeholder"><i class=
